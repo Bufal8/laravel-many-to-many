@@ -8,6 +8,9 @@
                 <a class="btn btn-danger"href="{{route('project.create')}}">Add new project</a>
 
             @endauth
+            @guest
+                Guest
+            @endguest
         </h1>
         <ul class="list-unstyled">
             @foreach ($projects as $project)
