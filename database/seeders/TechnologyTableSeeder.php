@@ -5,8 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use App\Models\Technology;
 use App\Models\Project;
+use App\Models\Technology;
 
 class TechnologyTableSeeder extends Seeder
 {
@@ -23,7 +23,7 @@ class TechnologyTableSeeder extends Seeder
 
             $projects = Project :: inRandomOrder() -> limit(rand(1,5)) -> get();
 
-            $technology -> project() -> attach($projects);
+            $technology -> projects() -> attach($projects);
         }
     }
 }
